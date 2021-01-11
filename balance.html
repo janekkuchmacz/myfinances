@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Moje finanse</title>
+	<meta name="description" content="Aplikacja służąca do prowadzenia budżetu domowego">
+	<meta name="keywords" content="budżet domowy, finase, oszczędności, balans, fianse, zarządzanie własnymi finansami, pieniądze">
+
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="menu.css">
+	<link rel="stylesheet" href="fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<script src="funkcje.js"></script>
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+
+	<header>
+	
+	<div id="intro">
+		
+		<h1 class="logo">mojefinanse.com <i class="icon-money"></i></h1>
+		
+		<nav id="topnav">
+		
+			<ul class="menu">
+				<li><a href="#">Dodaj przychód</a></li>
+				<li><a href="#">Dodaj wydatek</a></li>
+				<li><a href="#">Przeglądaj bilans</a></li>
+				<li><a href="#">Ustawienia</a></li>
+				<li><a href="#">Wyloguj się</a></li>				
+			</ul>
+		
+		</nav>
+		
+	</div>
+	
+	</header>
+
+	<div class="container">
+	
+		<div class="west">
+		
+			<main>
+			
+				<article>
+				
+					<header>
+					
+						<h1>Przeglądaj bilans</h1>
+						
+							<div id="dropdown">
+								<a href="#">Wybierz okres czasu</a>
+								<ul>
+									   <li><a href="#" onclick="wyswietlTabele()">Bieżący miesiąc</a></li>
+									   <li><a href="#" onclick="wyswietlTabele()">Poprzedni miesiąc</a></li>
+									   <li><a href="#" onclick="wyswietlTabele()">Bieżący rok</a></li>
+									   <li><a href="#" onclick="niestandardowy()">Niestandardowy</a></li>
+								  </ul>
+							</div>
+							<div id="zakres">
+							
+							<h1>Przeglądaj bilans dla wybranego okresu czasu:</h1><form action="expense.php" method="post"><div class="pole"><label>Podaj datę początkową: <input type="date"  id="data" name="dzien" required></label></div><div class="pole"><label>Podaj datę końcową: <input type="date"  id="data" name="dzien" required></label></div><div style="przyciski"><div class="przycisk"><input type="button" value="Wyświetl bilans" onclick="wyswietlTabele()"></div></div></form>
+								
+							</div>
+							<div id="tabelaPrzychody">
+							
+								<table>
+								
+								<tr>
+								<td colspan="2"><span class="tytultabeliprzychody">Przychody</span></td>
+								</tr>
+								<tr>
+								<td><span class="kolumnytabeli">Kategoria</span></td>
+								<td><span class="kolumnytabeli">Przychód [zł]</span></td>
+								</tr>
+								<tr>
+								<td>Wynagrodzenie</td>
+								<td>2500,58</td>
+								</tr>
+								<tr>
+								<td>Odsetki bankowe</td>
+								<td>1500,48</td>
+								</tr>
+								<tr>
+								<td>Sprzedaż na allegro</td>
+								<td>480,95</td>
+								</tr>
+								<tr>
+								<td>Inne</td>
+								<td>180,45</td>
+								</tr>
+															
+								</table>
+							
+							</div>
+							<div id="tabelaWydatki">
+							
+								<table>
+								
+								<tr>
+								<td colspan="2"><span class="tytultabeliwydatki">Wydatki</span></td>
+								</tr>
+								<tr>
+								<td><span class="kolumnytabeli">Kategoria</span></td>
+								<td><span class="kolumnytabeli">Wydatek [zł]</span></td>
+								</tr>
+								<tr>
+								<td>Jedzenie</td>
+								<td>1000,58</td>
+								</tr>
+								<tr>
+								<td>Mieszkanie</td>
+								<td>860,29</td>
+								</tr>
+								<tr>
+								<td>Transport</td>
+								<td>480,95</td>
+								</tr>
+								<tr>
+								<td>Telekomunikacja</td>
+								<td>80,45</td>
+								</tr>
+								<tr>
+								<td>Opieka zdrowotna</td>
+								<td>280,45</td>
+								</tr>
+								<tr>
+								<td>Ubranie</td>
+								<td>160,45</td>
+								</tr>
+								<tr>
+								<td>Higiena</td>
+								<td>100,45</td>
+								</tr>
+															
+								</table>
+							
+							</div>
+											
+					</header>
+					
+				</article>
+			
+			</main>
+		</div>
+		<div class="east">
+		
+			<aside>
+				
+				<img src="ad.jpg" alt="reklama"> 
+			
+			</aside>
+			
+		</div>
+		<div style="clear:both;"></div>
+	
+	</div>
+	
+	<footer>
+		
+		<div class="info">
+			Wszelkie prawa zastrzeżone &copy; 2021 Dziękuję za wizytę!
+		</div>
+	
+	</footer>
+	
+
+
+
+</body>
+</html>

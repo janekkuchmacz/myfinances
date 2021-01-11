@@ -1,0 +1,379 @@
+body
+{
+	margin: 0;
+	color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+	background-image: url("banknotes.jpg");
+}
+#intro
+{
+	width:950px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+.logo
+{
+	font-size:54px;
+	font-weight:700;
+	color: #36b03c;
+	letter-spacing: 5px;
+	padding-top: 50px;
+	padding-bottom:40px;
+	margin-top:10px;
+	margin-bottom:0px;
+	background-color:rgba(0,0,0,0.7);
+}
+#topnav
+{
+	background-color: rgba(54,176,60,0.8);		
+}
+.menu
+{
+	list-style-type:none;
+	margin:0;
+	padding: 10px;
+	font-size:21px;
+	min-height:38px;
+	line-height: 200%;
+}
+.menu > li 
+{
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-right: 1px dashed #0a2b42;
+}
+.menu > li:last-child
+{
+	border-right: none;
+}
+.menu a
+{
+	color: #fff;
+	text-decoration:none; 
+}
+.menu a:hover
+{
+	color: #0a2b42;
+}
+h1
+{
+	font-size: 44px;
+	font-weight: 400;
+	color: #39a5f1;
+	margin-bottom: 20px;
+}
+h2
+{
+	font-size: 20px;
+	font-weight: 400;
+	color: #39a5f1;
+}
+
+.info
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	padding: 20px;
+	color: #36b03c;
+	background-color:rgba(0,0,0,0.7);
+	width:910px;
+	
+}
+.container
+{
+	margin-left:auto;
+	margin-right:auto;
+	width: 950px;
+	background-color:rgba(0,0,0,0.7);
+}
+.west
+{
+	float:left;
+	width: 670px;
+	padding-left:40px;
+	padding-right:30px;
+	text-align:justify;
+	padding-top:20px;
+	padding-bottom:20px;
+	color: #A9A9A9;
+}
+.east
+{
+	float:left;
+	width: 170px;
+	padding: 20px;
+}
+.west h1
+{
+	font-size: 30px;
+	font-weight:900;
+	color:  #36b03c;
+	margin-bottom: 20px; 
+}
+.east img
+{
+	margin-top:80px;
+}
+.pole
+{
+	margin-bottom: 10px;
+	font-size:24px;
+}
+input[type=number],
+input[type=date]
+{
+	width:200px;
+	background-color: #efefef;
+	color: #667;
+	border: 2px solid #ddd;
+	border-radius: 5px; /*zaokrąglenie bordera*/
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;/*zewnętrzna, domyślna obwódka mówiąca, że okno jest aktywne*/
+	margin-top:10px;
+	margin-bottom:10px;
+}
+input[type=number]:focus, 
+input[type=date]:focus/*wyróżnienie aktywności pola*/ 
+{
+	-webkit-box-shadow: -0px 0px 10px 2px rgba(204,204,204,0.9);
+	-moz-box-shadow: -0px 0px 10px 2px rgba(204,204,204,0.9);
+	box-shadow: -0px 0px 10px 2px rgba(204,204,204,0.9);
+	border: 2px solid #a5cda5;
+	background-color: #e9f3e9;
+	color: #428c42;
+}
+.platnosc
+{
+		margin-bottom: 10px;
+		font-size:24px;
+}
+.platnosc label:hover
+{
+	 color: #428c42;
+}
+input[type=radio]:checked
+{
+	background: #428c42;
+}
+.kategoria
+{
+		margin-bottom: 10px;
+		font-size:24px;
+}
+.kategoria label:hover
+{
+	 color: #428c42;
+}
+.rzad
+{
+	float:left;
+}
+.komentarze
+{
+		margin-bottom: 10px;
+		font-size:24px;
+}
+#komentarz
+{
+	font-size:24px;
+	resize:none;
+}
+input[type=submit],
+input[type=button]
+{
+	width:300px;
+	background-color: #36b03c;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top:20px;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline: none;
+}
+input[type=submit]:focus,
+input[type=button]:focus
+{
+	-webkit-box-shadow: -0px 0px 15px 5px rgba(204,204,204,0.9);
+	-moz-box-shadow: -0px 0px 15px 5px rgba(204,204,204,0.9);
+	box-shadow: -0px 0px 105x 5px rgba(204,204,204,0.9);
+}
+
+input[type=submit]:hover
+{
+	background-color: #37b93d;
+}
+
+button
+{
+	width:150px;
+	background-color: #8B0000;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top:20px;
+	margin-left:216px;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline: none;
+}
+button:focus
+{
+	-webkit-box-shadow: -0px 0px 15px 5px rgba(204,204,204,0.9);
+	-moz-box-shadow: -0px 0px 15px 5px rgba(204,204,204,0.9);
+	box-shadow: -0px 0px 105x 5px rgba(204,204,204,0.9);
+}
+
+button:hover
+{
+	background-color: #FF0000;
+}
+#przyciski
+{
+		margin-bottom: 10px;
+		font-size:24px;
+}
+.przycisk
+{
+	float:left;
+}
+.sticky
+{
+	width:950px;
+	position: fixed;
+	margin-left:auto;
+	margin-right:auto;
+	top:0;
+	z-index:100;
+}
+#dropdown
+{
+		margin-bottom: 10px;
+		font-size:24px;
+		position:relative;
+		width: 200px; 
+}
+#dropdown ul
+{
+     visibility: hidden; 
+	 padding: 0;
+     position: absolute; 
+     left: 0px;  
+	 top: 40px;
+     width: 200px; 
+     text-align: left;
+     transform: scaleY(0); /* zwijamy cały element */
+     -webkit-transform: scaleY(0);
+     transform-origin: 50% 0; /* ustawiamy punkt zwijania względem środka górnej krawędzi */
+     -webkit-transform-origin: 50% 0;
+     transition: 200ms; /* wydłużamy wykonywanie stylów */
+	list-style-type:none;
+	 
+}
+#dropdown:hover ul
+{
+	visibility: visible;
+	transform: scaleY(1); /* rozwijamy element do całej jego wysokości */
+     -webkit-transform: scaleY(1);
+}
+#dropdown a
+{
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	width:300px;
+	background-color: rgba(54,176,60,0.7);
+	font-size:24px;
+	font-weight:400;
+	color: white;
+	padding: 15px 10px;
+	margin-top:20px;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline: none;
+	
+}
+#dropdown ul>li a
+{
+	text-decoration:none;
+	color: white;
+	margin-top:5px;
+	font-size: 20px;
+}
+#dropdown ul a:hover
+{
+	background-color:#37b93d;
+}
+#zakres
+{
+		margin-bottom: 10px;
+		margin-top: 20px;
+		font-size:24px;
+		
+}
+#zakres h1
+{
+	color:white;
+	font-size:24px;	
+}
+#tabelaPrzychody
+{
+	color:white;
+	font-size:24px;
+	text-align:center;	
+}
+#tabelaPrzychody table 
+{
+	margin-top: 20px;
+	border: 3px #36b03c solid;
+	border-radius: 10px;
+}
+.tytultabeliprzychody
+{
+	font-weight: 900;
+	color: #36b03c;
+	font-size: 28px;
+}
+#tabelaPrzychody table td
+{
+	min-width:330px;	
+}
+.kolumnytabeli
+{
+	font-weight: 900;
+	font-size: 26px;
+}
+#tabelaWydatki
+{
+	color:white;
+	font-size:24px;
+	text-align:center;	
+}
+#tabelaWydatki table 
+{
+	margin-top: 20px;
+	border: 3px #FF0000 solid;
+	border-radius: 10px;
+}
+#tabelaWydatki table td
+{
+	min-width:330px;	
+}
+.tytultabeliwydatki
+{
+	font-weight: 900;
+	color: #FF0000;
+	font-size: 28px;
+}

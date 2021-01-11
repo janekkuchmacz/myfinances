@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Moje finanse</title>
+	<meta name="description" content="Aplikacja służąca do prowadzenia budżetu domowego">
+	<meta name="keywords" content="budżet domowy, finase, oszczędności, balans, fianse, zarządzanie własnymi finansami, pieniądze">
+
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="menu.css">
+	<link rel="stylesheet" href="fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+	<script>
+	
+		function odliczanie()
+		{
+			var dzisiaj = new Date();
+			
+			var dzien = dzisiaj.getDate();
+			var miesiac = dzisiaj.getMonth()+1;
+			var rok = dzisiaj.getFullYear();
+			
+			if(dzien<10){
+							dzien='0'+dzien;
+						} 
+			if(miesiac<10){
+							miesiac='0'+miesiac;
+							} 
+			document.getElementById("data").defaultValue = rok+'-'+miesiac+'-'+dzien;
+			
+			setTimeout("odliczanie()", 1);
+		}
+		
+	
+	</script>
+	
+</head>
+
+<body onload="odliczanie();">
+
+	<header>
+	
+	<div id="intro">
+		
+		<h1 class="logo">mojefinanse.com <i class="icon-money"></i></h1>
+		
+		<nav id="topnav">
+		
+			<ul class="menu">
+				<li><a href="#">Dodaj przychód</a></li>
+				<li><a href="#">Dodaj wydatek</a></li>
+				<li><a href="#">Przeglądaj bilans</a></li>
+				<li><a href="#">Ustawienia</a></li>
+				<li><a href="#">Wyloguj się</a></li>				
+			</ul>
+		
+		</nav>
+		
+	</div>
+	
+	</header>
+
+	<div class="container">
+	
+		<div class="west">
+		
+			<main>
+			
+				<article>
+				
+					<header>
+					
+						<h1>Dodaj wydatek</h1>
+						
+					</header>
+					
+					<form action="expense.php" method="post">
+					
+						<div class="pole">
+							<label>Podaj kwotę: <input type="number" step="0.01" placeholder="kwota w zł" onfocus="this.placeholder=''" onblur="this.placeholder='kwota w zł'" name="kwota" required> zł</label>
+						</div>
+						<div class="pole">
+							<label>Podaj datę: <input type="date"  id="data" name="dzien" required></label>
+						</div>
+						<div class="platnosc">
+					
+							<fieldset>
+						
+							<legend>Sposób płatności</legend>
+						
+							<div><label><input type="radio" value="1" name="platnosc" checked>Gotówka</label></div>
+							<div><label><input type="radio"value="2" name="platnosc">Karta kredytowa</label></div>
+							<div><label><input type="radio" value="3" name="platnosc">Karta debetowa</label></div>
+						
+						</fieldset>
+					
+						</div>
+						
+						<div class="kategoria">
+					
+							<fieldset>
+						
+							<legend>Kategoria</legend>
+							
+							<div class="rzad">
+						
+								<div><label><input type="radio" value="1" name="kategoria">Jedzenie</label></div>
+								<div><label><input type="radio" value="2" name="kategoria">Mieszkanie</label></div>
+								<div><label><input type="radio" value="3" name="kategoria">Transport</label></div>
+								<div><label><input type="radio" value="4" name="kategoria">Telekomunikacja</label></div>
+								<div><label><input type="radio" value="5" name="kategoria">Opieka zdrowotna</label></div>
+								<div><label><input type="radio" value="6" name="kategoria">Ubranie</label></div>
+								<div><label><input type="radio" value="7" name="kategoria">Higiena</label></div>
+								<div><label><input type="radio" value="8" name="kategoria">Dzieci</label></div>
+								<div><label><input type="radio" value="9" name="kategoria">Rozrywka</label></div>
+								
+								
+							</div>
+							
+							<div class="rzad">
+						
+								<div><label><input type="radio" value="10" name="kategoria">Wycieczka</label></div>
+								<div><label><input type="radio" value="11" name="kategoria">Szkolenia</label></div>
+								<div><label><input type="radio" value="12" name="kategoria">Książki</label></div>
+								<div><label><input type="radio" value="13" name="kategoria">Oszczędności</label></div>
+								<div><label><input type="radio" value="14" name="kategoria">Złota jesień</label></div>
+								<div><label><input type="radio" value="15" name="kategoria">Spłata długów</label></div>
+								<div><label><input type="radio" value="16" name="kategoria">Darowizna</label></div>
+								<div><label><input type="radio" value="17" name="kategoria">Inne wydatki</label></div>
+																
+							</div>
+							
+							<div style="clear:both"></div>
+							
+							</fieldset>
+					
+						</div>
+						
+						<div class="komentarze">
+						<label>Komentarz (opcjonalnie)
+						<div><textarea name="komentarz" id="komentarz" rows="2" cols="50"></textarea></div>
+						</label>
+						</div>
+						
+						<div style="przyciski">
+						
+							<div class="przycisk"><input type="submit" value="Dodaj wydatek"></div>
+						
+							<div class="przycisk"><button type="button">Anuluj</button></div>
+							
+							<div style="clear:both;"></div>
+						
+						</div>
+						
+						
+					</form>
+					
+									
+				</article>
+			
+			</main>
+		</div>
+		<div class="east">
+		
+			<aside>
+				
+				<img src="ad.jpg" alt="reklama"> 
+			
+			</aside>
+			
+		</div>
+		<div style="clear:both;"></div>
+	
+	</div>
+	
+	<footer>
+		
+		<div class="info">
+			Wszelkie prawa zastrzeżone &copy; 2021 Dziękuję za wizytę!
+		</div>
+	
+	</footer>
+	
+	<script src="jquery-3.5.1.min.js" ></script>
+	<script>
+
+		$(document).ready(function() {
+		var NavY = $('#topnav').offset().top;
+		 
+		var stickyNav = function(){
+		var ScrollY = $(window).scrollTop();
+			  
+		if (ScrollY > NavY) { 
+			$('#topnav').addClass('sticky');
+		} else {
+			$('#topnav').removeClass('sticky'); 
+		}
+		};
+		 
+		stickyNav();
+		 
+		$(window).scroll(function() {
+			stickyNav();
+		});
+		});
+	
+	</script>
+	
+</body>
+</html>
